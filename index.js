@@ -22,11 +22,15 @@ const symbol = '~!@#$%^&*(){}[]<,>./?|\=+-_';
  let passwordLength=10;
  let checkcount =0;
  handleSlider();
+ setIndicator("#ccc")
  // set strength color 
 
   function handleSlider(){
     inputSlider.value= passwordLength;
     lengthDisplay.innerText=passwordLength;
+      const min = inputSlider.min;
+      const max = inputSlider.max;
+      inputSlider.style.backgroundSize=((passwordLength - min )*100/(max - min) )+ "%100%";
     
     // const newValue = passwordLength + 1;
     // inputSlider.value=newValue;
@@ -108,10 +112,10 @@ function shufflePassword(array){
     array[i]=array[j];
     array[j]=temp;
   }
-  // let str = "";
-  // array.forEach(el=>(str+=el));
-  // return str;
-  return array.join("");
+  let str = "";
+  array.forEach(el=>(str+=el));
+  return str;
+  // return array.join("");   
 }
 
 

@@ -1,4 +1,230 @@
-*{
+*,
+*::before
+*::after{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'league Spartan', sans-serif;
 }
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(137, 43, 226, 0.8 15);
+
+}
+.container{
+    height:fit-content;
+    width: fit-content;
+    
+    display: flex;
+    flex-direction: column;
+     /* border: 1px solid black; */
+     
+}
+
+.container H1{
+    /* color: white; */
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 1.5rem;
+    letter-spacing: 0.012rem;
+   
+}
+    
+
+.display-container{
+    position: relative;
+    display: flex;
+    /* width: 100%; */
+    border-bottom: 0.35rem solid rgba(0, 0, 0, 0.724);
+    border-radius: 7px;
+}
+.display{
+    /* position: absolute; */
+    
+    width:100%;
+    height: 2.5rem ;
+    border:hidden; 
+    border-radius: 5px;
+    background-color:rgba(0, 0, 0, 0.651);  
+}
+.display::placeholder{
+    color:rgba(255, 255, 0, 0.687);
+    padding: 0.5rem;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.display-container button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    right: 1rem;
+    border: none;
+    color: rgba(165, 95, 42, 0.909);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.copy-msg {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.copy-msg.active {
+  opacity: 1;
+  color: green;
+}
+
+/*  input container  */
+
+.input-container{
+    width: 90.5%;
+    margin-top: 0.65rem;
+    background-color: rgba(44, 30, 30, 0.963);
+    border-radius: 1rem;
+    padding-left: 1rem;
+    padding-right:1rem ;
+    
+
+
+
+}
+
+.length-container{
+    padding: 0.5rem 1rem;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+   
+}
+.length-container p:nth-child(1){
+    font-weight: 500;
+    color: white;
+}
+.length-container p:nth-child(2){
+    color: rgba(255, 255, 0, 0.799);
+}
+
+/*  slider */
+.slider{
+    appearance: none;
+    width:100%;
+    height: 0.75rem;
+    cursor: pointer;
+    background-color: aqua;
+    background-image: linear-gradient(left to right);
+    border-radius: 1rem;  
+    border: none;
+    background-image: linear-gradient( blueviolet,blueviolet);
+    background-repeat:no-repeat ;
+}
+.slider::-webkit-slider-thumb{
+   position: relative;
+   appearance: none;
+   width: 2rem;
+   height: 2rem;
+   border-radius: 100%;
+   background-color: yellow;
+   cursor: pointer;
+   margin-top: -7px;
+   margin-bottom: -7px;
+   transition: all 100ms ease-in;
+}
+.slider:focus{
+    outline: 3px solid rgba(255, 255, 0, 0.717);
+}
+.slider::-webkit-slider-thumb:hover{
+    z-index: 1;
+    outline: 2px solid yellow;
+    background-color: black;
+    box-shadow: 0 0 25px 5px  rgba(255,229,62,.50);
+
+}
+ 
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    /* padding: 0.12rem 0; */
+    font-weight: 500 ;
+    gap: 0 1rem ;
+    
+}
+.checkbox input{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid skyblue;
+    border-radius:0.35rem ;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.checkbox input:checked{
+    background-color: aqua;
+}
+
+.checkbox input:checked::before{
+    content: '✔️';
+    position: absolute;
+    top: 40%;
+    left:-0.12rem;
+   
+    transform: translateY(-50%);
+}
+
+.checkbox label{
+    letter-spacing: 0.05rem;
+    color: white;
+    font-size: 1rem;
+}
+.strength-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+
+}
+
+.indicator{
+    width:1rem;
+    height:1rem;
+    border-radius: 100%;
+    background-color: red;
+}
+.generateBtn{
+    width:100%;
+    height: 2rem;
+    /* margin-bottom: 1rem; */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: yellow;
+    background-color: blueviolet;
+
+}
+.generator{
+    width: 90%;
+    border-bottom: 0.35rem solid rgba(0, 0, 0, 0.527);
+    border-radius: 7px;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+    
+}
+
+.copy-btn{
+    background-color: ;
+}
+
